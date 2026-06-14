@@ -310,7 +310,3 @@ HTML report reviewed after the run
 No test.only or test.skip left in any spec file
 
 
-
-10. Risks
-
-RiskImpactMitigationSurvey already completed by test accountTC-10 fails on re-runReset survey state or use a fresh accountWeak locator in logoutTC-02 breaks on UI changeReplace with role-based locatorHardcoded wait in surveyTC-10 flaky on slow networkReplace with element visibility wait.env accidentally committedSecurity riskEnsure .env is in .gitignore
