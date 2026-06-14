@@ -1,4 +1,4 @@
-import { Page, expect, Download } from '@playwright/test';
+import { Page } from '@playwright/test';
 
 export class SettingsPage {
 
@@ -16,28 +16,18 @@ export class SettingsPage {
             .click();
     }
 
-    async openSecurityOptions() {
+    async openRecoveryCodesMenu() {
 
-        // Use the exact button recorder identified
         await this.page
             .getByRole('button')
             .nth(3)
             .click();
     }
 
-    async resendVerification() {
-
-        await this.page
-            .getByText('Resend', {
-                exact: true
-            })
-            .click();
-    }
-
     async resetRecoveryCodes() {
 
         await this.page
-            .getByText(/Reset.*re-download.*recovery/i)
+            .getByText(/Reset/i)
             .first()
             .click();
 
@@ -48,7 +38,7 @@ export class SettingsPage {
             .click();
     }
 
-    async downloadRecoveryCodes(): Promise<Download> {
+    async downloadRecoveryCodes() {
 
         const downloadPromise =
             this.page.waitForEvent('download');
@@ -62,7 +52,7 @@ export class SettingsPage {
         return await downloadPromise;
     }
 
-    async closeRecoveryModal() {
+    async closeRecoveryCodesModal() {
 
         await this.page
             .getByRole('button', {

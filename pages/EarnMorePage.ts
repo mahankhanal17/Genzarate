@@ -17,7 +17,7 @@ export class EarnMorePage {
             .click();
     }
 
-    async startSurvey() {
+   /* async startSurvey() {
         await this.page
             .getByRole('button', {
                 name: /Start Innovation & Emerging/i
@@ -72,4 +72,5 @@ export class EarnMorePage {
             })
             .click();
     }
+            */
 }

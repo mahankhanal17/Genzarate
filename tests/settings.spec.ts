@@ -2,9 +2,10 @@ import { test, expect } from '@playwright/test';
 
 import { LoginPage } from '../pages/LoginPage';
 import { SettingsPage } from '../pages/SettingsPage';
+
 import { validUser } from '../fixtures/testData';
 
-test('Recovery Codes Download Flow', async ({ page }) => {
+test('Settings - Recovery Codes Download', async ({ page }) => {
 
     const login = new LoginPage(page);
     const settings = new SettingsPage(page);
@@ -22,9 +23,7 @@ test('Recovery Codes Download Flow', async ({ page }) => {
 
     await settings.viewProfile();
 
-    await settings.openSecurityOptions();
-
-    await settings.resendVerification();
+    await settings.openRecoveryCodesMenu();
 
     await settings.resetRecoveryCodes();
 
@@ -35,5 +34,5 @@ test('Recovery Codes Download Flow', async ({ page }) => {
         download.suggestedFilename()
     ).toBeTruthy();
 
-    await settings.closeRecoveryModal();
+    await settings.closeRecoveryCodesModal();
 });
