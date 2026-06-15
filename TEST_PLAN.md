@@ -1,24 +1,15 @@
 TEST PLAN - GENZARATE WEB APPLICATION
-
-Version: 2.0
-Prepared by: QA Team
+Prepared by: Mahan Khanal
 Date: June 2026
 
-
-
 INTRODUCTION
-
-
 
 This test plan covers end-to-end automated testing of the
 Genzarate web application. The goal is to verify all major
 user flows including both positive and negative scenarios.
 
 
-
 SCOPE
-
-
 
 In Scope:
 
@@ -42,8 +33,6 @@ Admin panel
 Cross-browser testing (Chromium only)
 
 
-
-
 TEST ENVIRONMENT
 
 
@@ -52,7 +41,6 @@ Application URL  : https://testgenzarate.aigeeks.dev
 Browser          : Chromium
 Operating System : Windows
 Credentials      : Stored in .env file (not committed to GitHub)
-
 
 
 TOOLS USED
@@ -71,8 +59,6 @@ GitHub       - Version control
 TEST APPROACH
 
 
-
-
 Page Object Model (POM) — each page has its own class in
 the pages/ folder with locators and actions
 Role-based locators — getByRole() and getByLabel() used
@@ -88,10 +74,7 @@ Negative testing — invalid input and validation error
 scenarios covered alongside happy path
 
 
-
-
 TEST CASES
-
 
 
 --- MODULE 1: AUTHENTICATION ---
